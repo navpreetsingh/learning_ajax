@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <title>Books JSON Test</title>
+  <script type="text/javascript" language="JavaScript">
+   function test() {
+    var jsonData =
+{"books": [
+ {"title":"Hyperion", "author":"Dan Simmons", "isbn":"0553283685"},
+ {"title":"The Stars My Destination", "author":"Alfred Bester", 
+          "isbn":"0679767800"},
+ {"title":"Black House", "author": ["Stephen King", "Peter Straub"],
+           "isbn":"0345441036"},
+ {"title":"The Golden Compass", "author":"Philip Pullman", "isbn":"0679879242"},
+]};
+
+    alert(jsonData.books[1].author);
+    alert(jsonData.books[3].isbn);
+    alert(jsonData.books[2].isbn);
+    alert(jsonData.books[0].author);
+    alert(jsonData.books[2].title);
+    alert(jsonData.books[2].author[1]);
+   }
+  </script>
+ </head>
+
+ <body>
+  <input type="button" value="Test" name="Test" onClick="test();" />
+ </body>
+</html>

@@ -1,0 +1,61 @@
+<html> 
+ <head>
+  <title>Break Neck Pizza Delivery</title>
+  <link rel="stylesheet" type="text/css" 
+        href="breakneck.css" media="screen" />
+  <script language="javascript" type="text/javascript">
+
+    var request = null;
+
+    function createRequest(){
+      try{
+        request = new XMLHttpRequest();
+      }catch (trymicrosoft){
+        try{
+          request = new ActiveXObject("Msxml2.XMLHttpRequest");
+        }catch (othermicrosoft){
+          try{
+            request = new ActiveXObject("Microsoft.XMLHttp");
+          }catch(failed){
+            request = null;
+          }
+        }
+      }
+      if (request == null)
+        alert("Error creating request object!")
+    }
+
+    function getCustomerInfo(){
+      var phone_no = document.getElementById("phone").value
+      createRequest();
+      var url = "lookupCustomer.php?phone=" + escape(phone_no);
+      console.log(url);
+      request.open("GET", url, true);      
+      request.onreadystatechange = updatePage;
+      request.send (null); 
+    }
+
+    function updatePage(){
+      if (request.readyState == 4){
+        var address = request.responseText; 
+      }
+    }
+
+    </script>
+ </head>
+
+ <body onLoad="document.forms[0].reset();">
+  <p><img src="breakneck-logo.gif" alt="Break Neck Pizza" /></p>
+  <form method="POST" >
+   <p>Enter your phone number:
+    <input type="text" size="14" name="phone" id="phone" 
+      onChange="getCustomerInfo();" />
+   </p>
+   <p>Your order will be delivered to:</p>
+   <p><textarea name="address" id='address' rows="4" cols="50"></textarea></p>
+   <p>Type your order in here:</p>
+   <p><textarea name="order" id='order' rows="6" cols="50"></textarea></p>
+   <p><input type="submit" id='submit' value="Order Pizza" /></p>
+  </form>
+ </body>
+</html>

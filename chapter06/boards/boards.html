@@ -1,0 +1,45 @@
+<html>
+ <head>
+  <title>Boards 'R' Us</title>
+  <link rel="stylesheet" type="text/css" href="boards.css" media="screen" />
+  <script type="text/javascript" src="ajax.js"> </script>
+  <script type="text/javascript" src="text-utils.js"> </script>
+  <script type="text/javascript" src="boards.js"> </script>
+ </head>
+
+ <body>
+  <h1>Boards 'R' Us :: How Much Butt We're Kicking</h1>
+  <div id="boards">
+   <table>
+    <tr><th>Snowboards Sold</th>
+     <td><span id="boards-sold">1672</span></td></tr>
+    <tr><th>What I Sell 'em For</th>
+     <td>$<span id="boards-price">249.95</span></td></tr>
+    <tr><th>What it Costs Me</th>
+     <td>$<span id="boards-cost">84.22</span></td></tr>
+   </table>
+   <table>
+    <tr><th>Boots Sold</th>
+     <td><span id="boots-sold">312</span></td></tr>
+    <tr><th>What I Sell 'em For</th>
+     <td>$<span id="boots-price">175.47</span></td></tr>
+    <tr><th>What it Costs Me</th>
+     <td>$<span id="boots-cost">54.23</span></td></tr>
+   </table>
+   <table>
+    <tr><th>Bindings Sold</th>
+     <td><span id="bindings-sold">82</span></td></tr>
+    <tr><th>What I Sell 'em For</th>
+     <td>$<span id="bindings-price">146.92</span></td></tr>
+    <tr><th>What it Costs Me</th>
+     <td>$<span id="bindings-cost">98.03</span></td></tr>
+   </table>
+   <h2>Cash for the Slopes: 
+    $<span id="cash">318936.42</span></h2>
+   <form method="GET">
+    <input value="Show Me the Money" type="button" 
+           onClick="getNewTotals();" /> 
+   </form>
+  </div>
+ </body>
+</html>

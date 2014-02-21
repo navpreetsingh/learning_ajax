@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <title>What Am I exercise</title>
+  <script language="javascript">
+  function guess() {
+   var whatAmI;
+   var element = document.documentElement.lastChild;
+   alert("I am a " + element.nodeName);
+   var anotherElement = document.getElementsByTagName("h1")[0];
+   alert("I am a " + anotherElement.nodeValue);
+   var child = anotherElement.firstChild;
+   alert("I am a " + child.nodeValue);
+   element = document.getElementById("tiger").lastChild;
+   alert("I am a " + element.nodeValue);
+   alert("I am a " + element.parentNode.getAttributeNode("id").nodeValue);
+  }
+  </script>
+ </head>
+ <body>
+  <h1>I am a cow</h1>
+  <div id="ranch">
+   I am a <em>horse</em>, but I wish I
+   was a <span id="tiger">tiger</span>.
+  </div>
+  <form>
+   <input type="button" value="What Am I?" onClick="guess();" />
+  </form>
+ </body>
+</html>

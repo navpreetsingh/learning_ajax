@@ -1,0 +1,10 @@
+<html> <head>  <title>Ajax-powered Coffee Maker</title>  <link rel="stylesheet" type="text/css" href="coffee.css" />
+  <script type="text/javascript" src="ajax.js"> </script>
+  <script type="text/javascript" src="text-utils.js"> </script>
+  <script type="text/javascript" src="coffee.js"> </script> </head> <body>   <div id="header">    <h1>Ajax-powered Coffee Maker</h1>   </div>  <div id="wrapper">   <div id="coffeemaker1">    <h2>Coffee Maker #1</h2>    <p><img src="images/CoffeeMaker1.gif" alt="Coffee Maker #1" /></p>    <div id="coffeemaker1-status">Idle</div>   </div>   <div id="coffeeorder">    <p><img src="images/coffeeMugWithBeans.jpg" alt="Coffee Pot 1" /></p>    <h2>Place your coffee order here:</h2>    <div id="controls1">     <form>      <p>Name: <input type="text" name="name" id="name" /></p>      <h3>Size</h3>      <p>        <input type="radio" name="size"               value="small" checked="true">Small</input>
+       &nbsp;&nbsp;       <input type="radio" name="size" 
+              value="medium">Medium</input>
+       &nbsp;&nbsp;       <input type="radio" name="size" 
+              value="large">Large</input>      </p>      <h3>Beverage</h3>      <p>        <input type="radio" name="beverage"               value="mocha" checked="true">Mocha</input>
+       &nbsp;&nbsp;       <input type="radio" name="beverage"               value="latte">Latte</input>
+       &nbsp;&nbsp;       <input type="radio" name="beverage"               value="cappucino">Cappucino</input>      </p>      <p>       <input type="button"              onClick="orderCoffee()"              value="Order Coffee" />      </p>     </form>    </div>   </div>   <div id="coffeemaker2">    <h2>Coffee Maker #2</h2>    <p><img src="images/CoffeeMaker2.gif" alt="Coffee Maker #2" /></p>    <div id="coffeemaker2-status">Idle</div>   </div>     <p id="clear"></p>  </div> </body></html>

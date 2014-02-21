@@ -1,0 +1,34 @@
+body {
+  font-family:     Verdana, Geneva, Arial, sans-serif;
+  font-size:       small;
+  text-align:      center;
+}
+
+h1 {
+  color:           #cc6600;
+  border-bottom:   thin dotted #888888;
+  font-size:       1.7em;
+}
+
+h2 {
+  font-size:       1.3em;
+}
+
+table {
+  margin-left:     auto;
+  margin-right:    auto;
+  border:          thin solid black;
+  caption-side:    bottom;
+  border-collapse: collapse;
+  font-size:       small;
+}
+
+td, th {
+  border:          thin dotted grey;
+  padding:         5px;
+  text-align:      center;
+}
+
+th {
+ background-color: #fcba7a; 
+}
