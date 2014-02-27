@@ -37,7 +37,16 @@
 
     function updatePage(){
       if (request.readyState == 4){
-        var address = request.responseText; 
+        if(request.status == 200){
+        //Get the response from the server
+        var address = request.responseText;
+
+        //Update the HTML web form
+        document.getElementById("address").value = address; 
+      }
+      else{
+        alert("Error! Request status is " + request.status);
+      }
       }
     }
 
@@ -46,15 +55,18 @@
 
  <body onLoad="document.forms[0].reset();">
   <p><img src="breakneck-logo.gif" alt="Break Neck Pizza" /></p>
-  <form method="POST" >
+  <form method="POST" action="placeOrder.php" >
    <p>Enter your phone number:
     <input type="text" size="14" name="phone" id="phone" 
       onChange="getCustomerInfo();" />
-   </p>
-   <p>Your order will be delivered to:</p>
-   <p><textarea name="address" id='address' rows="4" cols="50"></textarea></p>
+   </p>   
    <p>Type your order in here:</p>
    <p><textarea name="order" id='order' rows="6" cols="50"></textarea></p>
+   
+   <p>Your order will be delivered to:</p>
+   <p><textarea name="address" id='address' rows="4" cols="50"></textarea>
+   </p>
+
    <p><input type="submit" id='submit' value="Order Pizza" /></p>
   </form>
  </body>
